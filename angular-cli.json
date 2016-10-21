@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": "assets",
       "index": "index.html",
+      "images": "images",
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",

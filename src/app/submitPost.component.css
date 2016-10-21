@@ -1,0 +1,12 @@
+#desc{width: 100%; border-width: 2px;}
+input{border-width: 2px;}
+
+      #con2{background-image:  url(../assets/bg.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom left;
+            width: 100%;
+            min-height: 100vh;
+            font-family: 'Francois One', sans-serif;}
+
+            div.alert.alert-danger{padding: 3px; margin: 5px auto;}

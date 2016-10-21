@@ -1,0 +1,129 @@
+<div class="container-fluid" id="con3">
+    <div class="container" style="padding-top: 2em; padding-bottom: 5em;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Login to Your Account:</h2>
+            </div>
+
+            <div class="panel-body">
+                <form action="" #f="ngForm" (ngSubmit)="login(f.value)">
+                    <div class="form-group">
+                        <label for="username">Username: </label>
+                        <input type="text" id="username" name="username" ngModel #username="ngModel" required minlength="5" class="form-control" placeholder="Username">
+                        <div *ngIf="username.errors && (username.dirty || username.touched)" class="alert alert-danger">
+                            <div [hidden]="!username.errors.required"> Username is required </div>
+                            <div [hidden]="!username.errors.minlength"> Username must be at least 5 characters long.</div>
+                        </div>       
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="link">Password: </label>
+                        <input type="password" id="password" name="password" ngModel #password="ngModel" required minlength="8" class="form-control" placeholder="Password">
+                        <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                            <div [hidden]="!password.errors.required"> Password is required </div>
+                            <div [hidden]="!password.errors.minlength"> Password must be at least 5 characters long.</div>
+                        </div>
+                    </div>
+
+                    <a href="#" (click)="showRegisterArea()" data-toggle="modal" data-target="#myModal1">Register</a>
+                    <button class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal2" [disabled]="!f.dirty || !f.valid">Login</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2>{{loginMsg}}</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="container" *ngIf="showRegisterAccount">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2>Register Your Account</h2>
+                    </div>
+                    <div class="panel-body">
+                        <form #f2="ngForm" (ngSubmit)="register(f2.value)" action="">
+                        <div class="form-group">
+                            <label for="username">Username: </label>
+                            <input type="text" id="username" name="username" ngModel #username="ngModel" required minlength="5" class="form-control" placeholder="Username">
+                            <div *ngIf="username.errors && (username.dirty || username.touched)" class="alert alert-danger">
+                                <div [hidden]="!username.errors.required"> Username is required </div>
+                                <div [hidden]="!username.errors.minlength"> Username must be at least 5 characters long.</div>
+                            </div>       
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="link">Email: </label>
+                            <input type="text" id="email" name="email" ngModel #email="ngModel" required minlength="5" class="form-control" placeholder="Password">
+                            <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                                <div [hidden]="!email.errors.required"> Email is required </div>
+                                <div [hidden]="!email.errors.minlength"> Email must be at least 5 characters long.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="link">Password: </label>
+                            <input type="password" id="password" name="password" ngModel #password="ngModel" required minlength="5" class="form-control" placeholder="Password">
+                            <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                                <div [hidden]="!password.errors.required"> Password is required </div>
+                                <div [hidden]="!password.errors.minlength"> Password must be at least 5 characters long.</div>
+                            </div>
+                        </div>
+
+                            <button class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal3" [disabled]="!f2.dirty || !f2.valid">Register</button>
+                        </form>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2>Registration Successful!</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

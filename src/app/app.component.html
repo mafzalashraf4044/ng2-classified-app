@@ -1,3 +1,109 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="nav navbar-default navbar-fixed-top">
+    <div class="container-fluid" id="topHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="headerSocialIcons">
+                    <div>
+                        <i class="fa fa-facebook"></i><i class="fa fa-ellipsis-v"></i>
+                        <i class="fa fa-youtube-play"></i><i class="fa fa-ellipsis-v"></i>
+                        <i class="fa fa-instagram"></i><i class="fa fa-ellipsis-v"></i>
+                        <i class="fa fa-linkedin"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-6" id="headerLinks">
+                    <ul>
+                        <li><a href="#">Contact Us</a><i class="fa fa-ellipsis-v"></i></li>
+                        <li><a href="#">Languages <span class="caret"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+
+            <a class="navbar-brand" href="#">SHOP19</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" id="navOpt">
+                <li><a [routerLink]="['home']">Home</a></li>
+                <li><a [routerLink]="['products']">Products</a></li>
+                <li><a [routerLink]="['submitpost']">Submit An Ad</a></li>
+                <li><a [routerLink]="['myaccount']">My Account</a></li>
+                <li><a [routerLink]="['contactus']">Contact Us</a></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</nav>
+
+<router-outlet></router-outlet>
+
+
+<div class="container-fluid" id="footer1">
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <h4>SHOP19</h4>
+            <br>
+            <p>Pakistan's Largest Marketplace</p>
+        </div>
+
+        <div class="col-md-3">
+
+            <h4>IMPORTANT LINKS</h4>
+            <br>
+            <ul>
+
+                <li><a href="#">Location Map</a></li>
+                <li><a href="#">Popular Searches</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+
+            <h4>IMPORTANT LINKS</h4>
+            <br>
+            <ul>
+
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Join Shop19</a></li>
+                <li><a href="#">Who we are</a></li>
+                <li><a href="#">Help</a></li>
+
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+
+            <h4>GET IN TOUCH</h4>
+            <br>
+            <p>Manager Shop19:</p>
+            <h6>Plot ST-19, Khayaban-e-Saadi, Clifton Block 5, Karachi-75600
+            </h6>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="footer2">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Design and Developed by Afzal Ashraf - Copyright &copy; 2016 - All Right Reserved - SHOP19</p>
+        </div>
+    </div>
+</div>

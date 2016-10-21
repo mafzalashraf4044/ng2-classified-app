@@ -1,0 +1,82 @@
+/*Header and Navigation Bar*/
+
+nav.navbar-fixed-top{background-color: white;}
+
+
+/*Top Header*/
+#topHeader{background-color: #303030;
+           font-size: 1.2em;}
+
+#topHeader i{color: #999999;
+}
+
+i.fa.fa-ellipsis-v{
+    padding: 0 0.6em;
+}
+
+#topHeader ul{list-style-type: none;
+              padding: 0;
+              margin: 0;
+              }
+
+#topHeader li{display: inline-block;}              
+
+#topHeader a{color: #999999;
+             text-decoration: none;}
+
+
+/*Main Navigation Bar*/
+
+.navbar-brand{color: #5D5257;
+              }
+
+#navOpt>li{padding-bottom: 4px;}
+
+#navOpt>li:hover{box-shadow: inset 0 -6px #5D5257;}
+
+#navOpt>li:hover>a{color: #05699D;}
+
+
+/*Footer*/
+
+#footer1{background-color: #5D5257;
+         color: white;
+         padding: 3em 9.5em;}
+
+#footer1 p{color: white;}
+
+#footer1 h4{text-shadow: 2px 2px 5px black;
+         margin-top: 1.5em;}
+
+#footer1 ul{list-style-type: none;
+         margin: 0;
+         padding: 0;}
+
+#footer1 a{color: white;}
+#footer1 a:hover{text-decoration: none;
+              text-shadow: 2px 2px 5px black;}
+
+#footer2{background-color: #09302C;
+       color: white;
+       padding: 1.5em 9.5em;}
+#footer2 p{text-align: center;
+         color: white;}
+
+/*For screen less than 992px*/
+@media only screen and (max-device-width: 992px){
+    #headerSocialIcons, #headerLinks{text-align: center;}
+    #navOpt>li:hover{box-shadow: inset -6px 0 #05699D;}
+    
+
+    #footer1, #footer2{text-align: center; padding: 2em 30px;}
+
+}
+
+
+/*For screen greater than 992px*/
+@media only screen and (min-device-width: 992px){
+    #headerLinks{text-align: right;}
+    
+    .navbar-brand{padding-left: 0;}
+
+}

@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*For screen less than 992px*/
+@media only screen and (max-device-width: 992px){
+body{padding-top: 96px;}
+
+}
+
+
+/*For screen greater than 992px*/
+@media only screen and (min-device-width: 992px){
+body{padding-top: 80px;}
+
+}
